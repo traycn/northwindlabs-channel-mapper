@@ -1,0 +1,35 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_version": "3",
+  "created_on": "2026-09-27",
+  "answers": {
+    "promo_x": {
+      "value": "promo_x",
+      "grouping": "I don't know",
+      "platform": null,
+      "confidence": "high",
+      "reason": "'promo' is ambiguous; could be any paid or organic channel."
+    },
+    "newchannel_q3": {
+      "value": "newchannel_q3",
+      "grouping": "I don't know",
+      "platform": null,
+      "confidence": "high",
+      "reason": "Generic name with no channel or platform indicators."
+    },
+    "li": {
+      "value": "li",
+      "grouping": "I don't know",
+      "platform": null,
+      "confidence": "medium",
+      "reason": "'li' likely means LinkedIn, but unclear if paid or organic social."
+    },
+    "social": {
+      "value": "social",
+      "grouping": "I don't know",
+      "platform": null,
+      "confidence": "high",
+      "reason": "'social' is ambiguous; could be paid or organic social."
+    }
+  }
+}

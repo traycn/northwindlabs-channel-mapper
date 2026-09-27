@@ -1,0 +1,11 @@
+# Cloudflare Pages settings for the channel mapper.
+# The AI key is NOT here: it's set as a secret in Cloudflare (ANTHROPIC_API_KEY).
+name = "channel-mapper"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-01"
+
+# Stores remembered AI answers (the cache) and the request-limit counters.
+# Replace the id with the one Cloudflare gives when the namespace is created.
+[[kv_namespaces]]
+binding = "SUGGEST_KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"

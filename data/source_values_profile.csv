@@ -1,0 +1,32 @@
+raw_value,cleaned_value,touchpoints,share,first_touch_people,status,channel,note,counted_as_in_reports
+google/cpc,google/cpc,167,8.3,46,Mapped: lookup,Paid Search,matches how the current weekly report counts it,Paid Search
+google / organic,google/organic,165,8.2,38,Mapped: lookup,Organic Search,matches how the current weekly report counts it,Organic Search
+webinar,webinar,159,8.0,48,Mapped: lookup,Webinar,matches how the current weekly report counts it,Webinar
+bing/cpc,bing/cpc,157,7.8,48,Mapped: lookup,Paid Search,matches how the current weekly report counts it,Paid Search
+email,email,157,7.8,42,Mapped: lookup,Email,matches how the current weekly report counts it,Email
+direct,direct,150,7.5,34,Mapped: lookup,Direct,matches how the current weekly report counts it,Direct
+referral,referral,149,7.4,36,Mapped: lookup,Referral,matches how the current weekly report counts it,Referral
+linkedin/paid,linkedin/paid,149,7.4,34,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+facebook/paid,facebook/paid,148,7.4,37,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+linkedin-sponsored,linkedin-sponsored,36,1.8,9,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+eml,eml,34,1.7,9,Mapped: lookup,Email,matches how the current weekly report counts it,Email
+li_paid,li_paid,33,1.7,10,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+fb/cpc,fb/cpc,33,1.7,11,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+partner_acme,partner_acme,33,1.7,6,Mapped: lookup,Referral,team decision 2026-09-27: partner traffic counts as Referral,Other
+meta_paid,meta_paid,32,1.6,7,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+li,li,31,1.6,8,Needs a person,,"LinkedIn, but paid or organic? No campaign attached.",Other
+fb-ads,fb-ads,31,1.6,9,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+adwords,adwords,28,1.4,7,Mapped: lookup,Paid Search,matches how the current weekly report counts it,Paid Search
+google_cpc,google_cpc,27,1.4,8,Mapped: lookup,Paid Search,matches how the current weekly report counts it,Paid Search
+paid_social_li,paid_social_li,26,1.3,5,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+null,null,26,1.3,8,Unresolved: blank,,Empty or placeholder,Other
+n/a,n/a,26,1.3,12,Unresolved: blank,,Empty or placeholder,Other
+promo_x,promo_x,25,1.2,5,Needs a person,,No clue in the name or a campaign.,Other
+LinkedIn Paid,linkedin paid,25,1.2,5,Mapped: lookup,Paid Social,matches how the current weekly report counts it,Paid Social
+social,social,24,1.2,4,Needs a person,,"Paid or organic, and which platform? No campaign attached.",Other
+newchannel_q3,newchannel_q3,23,1.1,5,Needs a person,,Genuinely new value. No campaign attached.,Other
+li_organic,li_organic,23,1.1,5,Mapped: lookup,Organic Social,matches how the current weekly report counts it,Organic Social
+g/cpc,g/cpc,23,1.1,4,Mapped: lookup,Paid Search,Paid Search confirmed by campaigns; platform unknown,Paid Search
+email-nurture,email-nurture,22,1.1,2,Mapped: lookup,Email,all 22 touchpoints belong to Email campaigns,Email
+organic-linkedin,organic-linkedin,22,1.1,6,Mapped: lookup,Organic Social,matches how the current weekly report counts it,Organic Social
+,,16,0.8,12,Unresolved: blank,,Empty or placeholder,Other

@@ -1,0 +1,31 @@
+campaign_id,name,channel,type,start_date,end_date,spend,attributed_leads
+C001,Q3 Onboarding Paid Program,Paid Search,Paid,2026-05-07,2026-05-18,5000,16
+C002,Q3 Investigations Paid Program,Paid Social,Paid,2026-06-25,2026-07-05,2500,10
+C003,Q3 Investigations Email Series,Email,Nurture,2026-04-29,2026-05-22,500,8
+C004,Q3 Wallet Webinar Sprint,Webinar,Webinar,2026-05-28,2026-06-10,500,5
+C005,Q3 Reporting Paid Blast,Paid Search,Paid,2026-05-28,2026-06-12,10000,19
+C006,Q3 Compliance Paid Blast,Paid Social,Paid,2026-04-16,2026-05-16,2500,16
+C007,Q3 Investigations Email Push,Email,Nurture,2026-05-11,2026-06-03,1000,11
+C008,Q3 Fraud Webinar Series,Webinar,Webinar,2026-04-12,2026-04-25,1000,6
+C009,Q3 AML Paid Push,Paid Search,Paid,2026-05-12,2026-05-21,7500,14
+C010,Q3 AML Paid Program,Paid Social,Paid,2026-06-12,2026-06-30,2500,14
+C011,Q3 Onboarding Email Push,Email,Nurture,2026-04-20,2026-05-04,1000,4
+C012,Q3 Reporting Webinar Series,Webinar,Webinar,2026-05-14,2026-06-04,1000,6
+C013,Q3 Investigations Paid Program,Paid Search,Paid,2026-06-12,2026-07-05,10000,11
+C014,Q3 Reporting Paid Program,Paid Social,Paid,2026-06-25,2026-07-05,12000,15
+C015,Q3 Travel Rule Email Sprint,Email,Nurture,2026-06-16,2026-07-05,1000,4
+C016,Q3 Sanctions Webinar Program,Webinar,Webinar,2026-05-01,2026-05-09,1000,3
+C017,Q3 Compliance Paid Blast,Paid Search,Paid,2026-04-29,2026-05-12,2500,12
+C018,Q3 Stablecoin Paid Blast,Paid Social,Paid,2026-05-21,2026-06-20,7500,22
+C019,Q3 Fraud Email Sprint,Email,Nurture,2026-05-27,2026-06-21,1500,8
+C020,Q3 Sanctions Webinar Blast,Webinar,Webinar,2026-05-14,2026-06-06,500,10
+C021,Q3 Compliance Paid Push,Paid Search,Paid,2026-05-02,2026-05-09,7500,10
+C022,Q3 Travel Rule Paid Program,Paid Social,Paid,2026-05-30,2026-06-09,12000,12
+C023,Q3 Stablecoin Email Series,Email,Nurture,2026-06-22,2026-07-05,500,9
+C024,Q3 Fraud Webinar Sprint,Webinar,Webinar,2026-05-23,2026-05-30,500,12
+C025,Q3 Investigations Paid Sprint,Paid Search,Paid,2026-04-23,2026-05-11,10000,13
+C026,Q3 DeFi Paid Blast,Paid Social,Paid,2026-06-01,2026-06-21,5000,17
+C027,Q3 AML Email Push,Email,Nurture,2026-04-10,2026-04-18,500,9
+C028,Q3 AML Webinar Sprint,Webinar,Webinar,2026-06-17,2026-06-28,500,6
+C029,Q3 Onboarding Paid Blast,Paid Search,Paid,2026-05-26,2026-06-07,12000,18
+C030,Q3 AML Paid Program,Paid Social,Paid,2026-06-16,2026-06-29,7500,21

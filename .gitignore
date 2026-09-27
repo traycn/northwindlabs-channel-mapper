@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+dist/
+weekly-check-report.md
+previous-issues.json
+.wrangler/
+.dev.vars
+.env*

@@ -1,0 +1,51 @@
+{
+  "groupings": [
+    {
+      "channel": "Paid Search",
+      "platforms": [
+        "Google",
+        "Microsoft"
+      ]
+    },
+    {
+      "channel": "Paid Social",
+      "platforms": [
+        "LinkedIn",
+        "Meta"
+      ]
+    },
+    {
+      "channel": "Email",
+      "platforms": []
+    },
+    {
+      "channel": "Organic Search",
+      "platforms": [
+        "Google"
+      ]
+    },
+    {
+      "channel": "Organic Social",
+      "platforms": [
+        "LinkedIn"
+      ]
+    },
+    {
+      "channel": "Webinar",
+      "platforms": []
+    },
+    {
+      "channel": "Direct",
+      "platforms": []
+    },
+    {
+      "channel": "Referral",
+      "platforms": []
+    }
+  ],
+  "note": "'Other' is deliberately not a grouping. Values we can't place are shown as unresolved instead.",
+  "rules_for_ai": [
+    "Values containing the word \"partner\" (for example partner_acme) count as Referral. Sponsorships and events are not partners.",
+    "When the entire value is just cpc, ppc or ads, answer \"I don't know\": it doesn't say whether it's search or social. Values that name a platform, such as adwords, gads or google_cpc, follow that platform."
+  ]
+}

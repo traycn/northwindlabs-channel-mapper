@@ -1,0 +1,245 @@
+{
+  "version": 3,
+  "aliases": [
+    {
+      "key": "google/cpc",
+      "example_raw_value": "google/cpc",
+      "channel": "Paid Search",
+      "platform": "Google",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "bing/cpc",
+      "example_raw_value": "bing/cpc",
+      "channel": "Paid Search",
+      "platform": "Microsoft",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "adwords",
+      "example_raw_value": "adwords",
+      "channel": "Paid Search",
+      "platform": "Google",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "google_cpc",
+      "example_raw_value": "google_cpc",
+      "channel": "Paid Search",
+      "platform": "Google",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "g/cpc",
+      "example_raw_value": "g/cpc",
+      "channel": "Paid Search",
+      "platform": null,
+      "status": "approved",
+      "basis": "all 23 touchpoints belong to Paid Search campaigns; platform unknown (campaigns do not record Google vs Microsoft), check the ad account",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "linkedin/paid",
+      "example_raw_value": "linkedin/paid",
+      "channel": "Paid Social",
+      "platform": "LinkedIn",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "linkedin-sponsored",
+      "example_raw_value": "linkedin-sponsored",
+      "channel": "Paid Social",
+      "platform": "LinkedIn",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "li_paid",
+      "example_raw_value": "li_paid",
+      "channel": "Paid Social",
+      "platform": "LinkedIn",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "paid_social_li",
+      "example_raw_value": "paid_social_li",
+      "channel": "Paid Social",
+      "platform": "LinkedIn",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "linkedin paid",
+      "example_raw_value": "LinkedIn Paid",
+      "channel": "Paid Social",
+      "platform": "LinkedIn",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "facebook/paid",
+      "example_raw_value": "facebook/paid",
+      "channel": "Paid Social",
+      "platform": "Meta",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "fb/cpc",
+      "example_raw_value": "fb/cpc",
+      "channel": "Paid Social",
+      "platform": "Meta",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "meta_paid",
+      "example_raw_value": "meta_paid",
+      "channel": "Paid Social",
+      "platform": "Meta",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "fb-ads",
+      "example_raw_value": "fb-ads",
+      "channel": "Paid Social",
+      "platform": "Meta",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "email",
+      "example_raw_value": "email",
+      "channel": "Email",
+      "platform": null,
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "eml",
+      "example_raw_value": "eml",
+      "channel": "Email",
+      "platform": null,
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "email-nurture",
+      "example_raw_value": "email-nurture",
+      "channel": "Email",
+      "platform": null,
+      "status": "approved",
+      "basis": "all 22 touchpoints belong to Email campaigns",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "google/organic",
+      "example_raw_value": "google / organic",
+      "channel": "Organic Search",
+      "platform": "Google",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "li_organic",
+      "example_raw_value": "li_organic",
+      "channel": "Organic Social",
+      "platform": "LinkedIn",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "organic-linkedin",
+      "example_raw_value": "organic-linkedin",
+      "channel": "Organic Social",
+      "platform": "LinkedIn",
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "webinar",
+      "example_raw_value": "webinar",
+      "channel": "Webinar",
+      "platform": null,
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "direct",
+      "example_raw_value": "direct",
+      "channel": "Direct",
+      "platform": null,
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "referral",
+      "example_raw_value": "referral",
+      "channel": "Referral",
+      "platform": null,
+      "status": "approved",
+      "basis": "matches how the current weekly report counts it",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    },
+    {
+      "key": "partner_acme",
+      "example_raw_value": "partner_acme",
+      "channel": "Referral",
+      "platform": null,
+      "status": "approved",
+      "basis": "team decision 2026-09-27: partner traffic counts as Referral, not its own channel; AI also leaned Referral (medium)",
+      "approved_by": "Tracy N",
+      "approved_on": "2026-09-27"
+    }
+  ]
+}

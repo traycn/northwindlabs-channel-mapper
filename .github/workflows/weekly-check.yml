@@ -1,0 +1,62 @@
+# Weekly check: every Monday, look for source values that aren't on the
+# approved list and haven't been reported before. If there are any, open a
+# GitHub issue listing them and how often they appear.
+#
+# To test it: Actions tab → "Weekly check" → "Run workflow", tick "Open a test
+# issue". A test issue lists every unrecognized value and can be closed.
+name: Weekly check
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Mondays at 08:00 UTC
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Open a test issue even if nothing is new"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Make sure the issue label exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh label create weekly-check --color B4532A --description "Opened by the weekly check" --force
+
+      - name: Collect values reported in earlier issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue list --label weekly-check --state all --limit 500 --json body > previous-issues.json
+
+      - name: Check for new unrecognized values
+        id: check
+        env:
+          TEST_RUN: ${{ inputs.test == true }}
+        run: |
+          if [ "$TEST_RUN" = "true" ]; then
+            npx tsx scripts/weekly-check.ts previous-issues.json --test
+          else
+            npx tsx scripts/weekly-check.ts previous-issues.json
+          fi
+
+      - name: Open an issue
+        if: steps.check.outputs.open_issue == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ steps.check.outputs.title }}
+        run: gh issue create --title "$TITLE" --body-file weekly-check-report.md --label weekly-check
