@@ -1,6 +1,6 @@
 # Cloudflare Pages settings for the channel mapper.
 # The AI key is NOT here: it's set as a secret in Cloudflare (ANTHROPIC_API_KEY).
-name = "channel-mapper"
+name = "northwindlabs-channel-mapper"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-09-01"
 
