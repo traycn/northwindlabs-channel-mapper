@@ -145,3 +145,13 @@ The harder test cases found two confidently wrong answers (`cpc` and `ppc` → P
   - "Our choice" on the Options page is **B. Automate manual steps**, with shared definitions as the next step.
   - Tracy N is named as the person to ask when unsure, and as the person who adds exported decisions to the approved list each week.
   - The marketing analyst is named as the person who works through the review queue each week.
+
+### Who can open the site (changed)
+- **Earlier decision:** Team only, with Cloudflare Access.
+- **Decided now:** The site is public. The repository stays private.
+- **Why:** Team decision. The site only shows totals, the approved list, AI answers and the written pages; person-level data (people, dates, campaigns) is never included in the site. The AI is still protected by the request limits (20 requests per visitor and 300 in total per day) and the Anthropic monthly spending limit.
+
+## 2026-09-27: Live at https://northwindlabs-channel-mapper.pages.dev
+
+- Weekly check: the manual test run opened a test issue listing the 4 unrecognized values.
+- Live AI check: of 12 values sent, only the 4 unfamiliar ones reached the AI. Blanks, junk and approved values were dropped. The same request again was answered entirely from remembered answers.
