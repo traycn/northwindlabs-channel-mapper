@@ -166,3 +166,12 @@ The harder test cases found two confidently wrong answers (`cpc` and `ppc` → P
 - **Suggested:** Not in `CLAUDE.md`'s section list. Requested by the team.
 - **Decided:** Add a section that compares ways to automate the weekly touchpoint import: what each would automate, who would be involved, and the pros and cons. It sits after "How we know it works". `CLAUDE.md` now lists it.
 - **Why:** Someone currently has to export the data and replace `data/touchpoints.csv` by hand each week, or the weekly check keeps seeing old data.
+
+### Section order, and a second enhancement
+- **Decided:** The main sections stay 1 to 8, ending with the decision log. "Automating the import" moves to the end as **E1**, followed by a new **E2. Definition recommendations** section. E2 sets out each definition the teams need to agree on, what the data shows, the options and a recommendation.
+- **Why:** Team request. The enhancements are proposals, so they come after the project itself.
+
+### Correction: acceptance of lower-score MQLs
+- **Earlier figure (Stage 0 corrections, above):** in weeks 7 to 13, MQLs scoring under 62 were accepted 71% of the time (32 of 45), compared with 79%.
+- **Correct figure:** 70% (31 of 44), compared with 78% (90 of 116). The earlier counts accidentally included week 14, which is outside the report period.
+- **Effect:** None on the conclusion. `DATA_NOTES.md` and the site now use the correct figures.

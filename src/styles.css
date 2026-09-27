@@ -72,6 +72,8 @@ a { color: var(--accent); }
 .site-header nav a:hover { color: var(--ink); background: var(--panel); }
 .site-header nav a[aria-current="page"] { color: var(--ink); background: var(--accent-tint); font-weight: 500; }
 .n { font-size: 0.75em; color: var(--ink-soft); margin-right: 6px; font-weight: 500; }
+.site-header li.enhancement .n { color: var(--accent); font-weight: 600; }
+.site-header li:not(.enhancement) + li.enhancement { margin-left: 8px; padding-left: 12px; border-left: 1px solid var(--line); }
 
 .page-title { font-size: 1.6rem; font-weight: 600; margin: 4px 0 20px; }
 .page-title .n { font-size: 0.6em; vertical-align: 0.25em; }
@@ -368,4 +370,23 @@ body.present { --line: color-mix(in srgb, var(--ink) 30%, var(--paper)); }
 
 @media (max-width: 900px) {
   .auto-options, .before-after, .proscons { grid-template-columns: 1fr; }
+}
+
+/* ---------- Definition recommendations ---------- */
+.definition { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; background: var(--panel); max-width: 980px; scroll-margin-top: 16px; }
+.definition h2 { margin: 2px 0 6px; }
+.def-question { font-size: 1.05rem; margin: 0 0 12px; }
+.def-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.def-grid ul { margin: 0; padding-left: 18px; font-size: 0.94rem; }
+.def-grid li { margin: 4px 0; }
+.def-rec { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 4px; }
+.def-rec p { margin: 0 0 6px; }
+.def-status { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.def-status.open { background: var(--suggested-tint); color: var(--suggested); }
+.def-status.partly { background: var(--accent-tint); color: var(--accent); }
+.definition code, .facts code { font-family: var(--mono); font-size: 0.9em; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+
+@media (max-width: 760px) {
+  .def-grid { grid-template-columns: 1fr; }
+  .definition { padding: 12px 14px; }
 }

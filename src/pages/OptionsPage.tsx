@@ -35,7 +35,7 @@ const ANSWERS: [question: string, definitions: string, automate: string][] = [
   [
     "What it depends on",
     "Time from all three groups, and someone to decide when they disagree.",
-    "The weekly data export the analyst already does, a low-cost AI connection with a spending limit, and a few minutes of review each week.",
+    "The weekly data export the analyst already does, a low-cost AI connection with a spending limit, and a short weekly review.",
   ],
 ];
 
@@ -85,7 +85,7 @@ export function OptionsPage() {
         </p>
         <p>
           Agreeing on shared definitions is the next step, not a rejected one. It starts with which headline the weekly view
-          leads with, and who owns the MQL threshold. See <a href="#evidence">What comes next</a>.
+          leads with, and who owns the MQL threshold. See <a href="#definitions">E2. Definition recommendations</a>.
         </p>
       </section>
     </>

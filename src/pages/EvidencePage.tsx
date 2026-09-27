@@ -109,12 +109,12 @@ export function EvidencePage() {
       <section aria-labelledby="next-h">
         <h2 id="next-h">What comes next</h2>
         <ol className="steps">
-          <li><strong>Agree on shared definitions</strong> with sales and leadership: which headline the weekly view leads with (qualified, accepted, or both), who owns the MQL threshold, and where changes to it are recorded.</li>
+          <li><strong>Agree on shared definitions</strong> with sales and leadership: which headline the weekly view leads with (qualified, accepted, or both), who owns the MQL threshold, and where changes to it are recorded. See <a href="#definitions">E2. Definition recommendations</a>.</li>
           <li><strong>Find out what <code>promo_x</code> and <code>newchannel_q3</code> are</strong>, and where <code>li</code> and <code>social</code> come from, so they can be approved or fixed at the source.</li>
           <li><strong>Confirm the AI test set's expected answers</strong>, so it moves from draft to approved.</li>
           <li><strong>Decide whether TikTok and X become Paid Social platforms.</strong> Until then, their values go to a person.</li>
           <li><strong>Add exported decisions to the approved list with a small script</strong>, instead of copying them by hand.</li>
-          <li><strong>Refresh the touchpoint data automatically</strong>, so the weekly check always runs on the latest export. See <a href="#automation">Automating the import</a> for the options.</li>
+          <li><strong>Refresh the touchpoint data automatically</strong>, so the weekly check always runs on the latest export. See <a href="#automation">E1. Automating the import</a> for the options.</li>
           <li><strong>Move to a newer AI model when needed.</strong> Claude Haiku 4.5 won't be retired before 15 October 2026, with at least 60 days' notice.</li>
         </ol>
       </section>

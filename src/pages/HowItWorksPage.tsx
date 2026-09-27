@@ -4,7 +4,7 @@
 type Who = "Fixed rules" | "AI" | "A person";
 
 const STEPS: { step: string; who: Who; outcome: string }[] = [
-  { step: "Clean up the value", who: "Fixed rules", outcome: "Spaces trimmed, lowercase, tidy separators. The original is kept." },
+  { step: "Clean up the value", who: "Fixed rules", outcome: "Extra spaces removed, including around “/”, and lowercase. The original is kept." },
   { step: "Spot blank or broken values", who: "Fixed rules", outcome: "→ Unresolved: blank / Unresolved: malformed. Never sent to the AI." },
   { step: "Look it up in the approved list", who: "Fixed rules", outcome: "→ Mapped, with its grouping." },
   { step: "Suggest a grouping for an unfamiliar value", who: "AI", outcome: "Picks one of our groupings, or answers “I don't know”." },
@@ -39,8 +39,8 @@ export function HowItWorksPage() {
         <p>
           The one step that needs judgment is a value the list has never seen. Reading <code>facebook_ads</code> as Paid Social
           on Meta is what AI does well. But it can also be confidently wrong, so it works inside fixed rules: it only sees clean,
-          unfamiliar values; it can only pick one of our groupings or say “I don't know”; only high-confidence answers are shown
-          as suggestions; and nothing counts until a person approves it.
+          unfamiliar values; any answer that isn't one of our groupings or “I don't know” is rejected; only high-confidence answers
+          are shown as suggestions; and nothing counts until a person approves it.
         </p>
       </section>
 

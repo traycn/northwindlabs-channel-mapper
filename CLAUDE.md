@@ -29,9 +29,13 @@ A website with two jobs:
 4. **How it works.** Which steps follow fixed rules and which use AI, and why.
 5. **How to use it.** A step-by-step walkthrough of the review queue, and what happens when someone makes a mistake.
 6. **How we know it works.** What we measure, the test results, and what comes next.
-7. **Automating the import.** Ways to automate the weekly touchpoint import: what each would automate, who would be involved, and the pros and cons. (Added 2026-09-27 at the team's request.)
-8. **Lessons learned.** One short page.
-9. **Decision log.** Every time the team changed or rejected something AI suggested, shown from `DECISION_LOG.md`.
+7. **Lessons learned.** One short page.
+8. **Decision log.** Every time the team changed or rejected something AI suggested, shown from `DECISION_LOG.md`.
+
+Suggested enhancements, after the main sections (added 2026-09-27 at the team's request):
+
+- **E1. Automating the import.** Ways to automate the weekly touchpoint import: what each would automate, who would be involved, and the pros and cons.
+- **E2. Definition recommendations.** Suggestions to guide the team's decisions on shared definitions (headline, counting date, MQL threshold, channels, unresolved values, report periods).
 
 ## Fixed rules vs. AI
 
@@ -95,10 +99,15 @@ Complete these before sharing the link with anyone:
   groupings.json             our list of channel groupings
   saved_suggestions.json     backup AI answers
   test_set.json              known answers used to test the AI
+  test_results.json          the latest AI test run
+  DATA_NOTES.md              what the data shows, decisions and open questions
+  source_values_profile.csv  every source value, its count and status
+  how-it-works-today.md      the manual process before the mapper
 /tests
 /.github/workflows/weekly-check.yml
 DECISION_LOG.md
 CLAUDE.md
+wrangler.toml               Cloudflare Pages settings (no keys)
 ```
 
 The sorting logic in `/src/mapper` is kept separate from the screens, so it can be tested on its own and reused elsewhere later.
@@ -157,16 +166,18 @@ The site should feel like a calm, trustworthy internal tool, not a sales pitch. 
 
 ## Launch checklist
 
-- [ ] The full touchpoint file runs from start to finish and the totals match the Stage 1 counts.
-- [ ] Every status appears in the results, or there's a note explaining why one doesn't.
-- [ ] Blank and broken values never reach the AI (check the logs).
-- [ ] With the AI connection turned off, the site uses the backup and labels those rows.
-- [ ] Approve, undo and reset all work, and one visitor's changes never affect another's.
-- [ ] Spending limit set, request limit tested, and the second run reuses saved answers.
-- [ ] The weekly check has opened a test issue.
-- [ ] "Options we considered" ends with one clear choice.
-- [ ] `DECISION_LOG.md` has real entries.
-- [ ] The site looks right on a laptop, during screen sharing, and on a phone.
+Status as of the 2026-09-27 launch:
+
+- [x] The full touchpoint file runs from start to finish and the totals match the Stage 1 counts.
+- [x] Every status appears in the results, or there's a note explaining why one doesn't.
+- [x] Blank and broken values never reach the AI. Checked on the live site: of 12 values sent, only the 4 unfamiliar ones reached the AI. The Cloudflare logs haven't been reviewed yet.
+- [x] With the AI connection turned off, the site uses the backup and labels those rows.
+- [ ] Approve, undo and reset all work, and one visitor's changes never affect another's. Approve and undo are checked; reset still needs one click-through by the team.
+- [ ] Spending limit set, request limit tested, and the second run reuses saved answers. The spending limit is set and reuse is checked live; the request limit is covered by tests only.
+- [x] The weekly check has opened a test issue.
+- [x] "Options we considered" ends with one clear choice.
+- [x] `DECISION_LOG.md` has real entries.
+- [ ] The site looks right on a laptop, during screen sharing, and on a phone. Checked at laptop and phone sizes in a browser; still to check on a real phone.
 
 ## Glossary
 

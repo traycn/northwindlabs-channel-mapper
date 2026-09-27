@@ -31,8 +31,7 @@ export function ProblemPage() {
         <p>
           Each week an analyst exports the campaign and touchpoint data, then sorts the source field into channels by hand.
           This quarter it was written 31 different ways, from <code>facebook/paid</code> to <code>fb-ads</code> to <code>meta_paid</code>.
-          Odd values are judged case by case, and nothing records why a value went where it did. Marketing builds its weekly
-          report from that spreadsheet, and sales keeps its own separate tally. Nothing runs end to end.
+          Odd values are judged case by case. Marketing builds its weekly report from that spreadsheet, and sales keeps its own separate tally. Nothing runs end to end.
         </p>
         <p>
           The two reports then answer different questions. Marketing counts people on the day they qualify, and sales counts
@@ -51,10 +50,10 @@ export function ProblemPage() {
       <section className="prose-block" aria-labelledby="who-h">
         <h2 id="who-h">Who it affects</h2>
         <ul className="people">
-          <li><strong>The marketing analyst</strong> spends about 3.5 hours a week exporting data and hand-sorting source values, with no record of past decisions to lean on.</li>
-          <li><strong>Demand generation</strong> spends about an hour building the weekly report on channel groupings it can't check.</li>
+          <li><strong>The marketing analyst</strong> spends about 3.5 hours a week exporting data and hand-sorting source values, judging odd ones case by case.</li>
+          <li><strong>Demand generation</strong> spends about an hour building the weekly report on top of that hand-sorted spreadsheet.</li>
           <li><strong>The sales / SDR team</strong> spends about an hour keeping its own accepted-lead count, which never lines up with marketing's.</li>
-          <li><strong>Leadership</strong> sees two different headlines for the same week, and can't tell which is right or how much of a trend is real.</li>
+          <li><strong>Leadership</strong> sees two different headlines for the same week, with nothing on the page to say which is right or how much of a trend is real.</li>
         </ul>
       </section>
 
@@ -77,8 +76,8 @@ export function ProblemPage() {
           </tbody>
         </table>
         <p className="after-table">
-          Apart from the “Other” bucket and how Paid Social is split, the channel totals in both reports are identical. So
-          most of the disagreement is about definitions, which the teams have to agree on. “Other” is a data problem we can
+          The channel totals in both reports are identical, “Other” included. Only the Paid Social detail differs. So most of
+          the disagreement is about definitions, which the teams have to agree on. “Other” is a data problem we can
           fix now. <a href="#options">The next section</a> compares the two ways forward.
         </p>
       </section>

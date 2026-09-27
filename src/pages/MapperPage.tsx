@@ -48,7 +48,7 @@ export function MapperPage() {
       <p className="lead">
         This runs the mapper on every touchpoint from 6 April to 5 July 2026. Start with the <strong>Unresolved / waiting</strong> box:
         it holds everything not yet placed in a channel, shown on its own instead of hidden in “Other”. Then work through the
-        review queue. Each decision updates the totals straight away.
+        review queue. Each decision updates the results straight away.
       </p>
 
       {usingBackup && (

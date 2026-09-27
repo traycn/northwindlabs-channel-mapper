@@ -58,7 +58,7 @@ The process note describes a "routine" recalibration of engagement scoring in we
 - In weeks 7 to 13, **44 of 160 MQLs (27.5%)** would not have qualified under the old rule.
 - Week 13 shows 31 MQLs. Under the old rule it would be 20.
 - Part of the MQL rise in the second half of the quarter comes from this definition change, not from more demand.
-- Sales accepted about the same share of MQLs before and after the change (74% in weeks 1 to 6, 76% in weeks 7 to 13). But within weeks 7 to 13, MQLs scoring under 62 were accepted less often (71%, 32 of 45) than those scoring 62 or more (79%). The group is small, so it's too early to say whether the extra MQLs are lower quality.
+- Sales accepted about the same share of MQLs before and after the change (74% in weeks 1 to 6, 76% in weeks 7 to 13). But within weeks 7 to 13, MQLs scoring under 62 were accepted less often (70%, 31 of 44) than those scoring 62 or more (78%, 90 of 116). The group is small, so it's too early to say whether the extra MQLs are lower quality.
 - The change only affected new people. 46 people created before week 7 scored between 44 and 61 and were never re-qualified.
 
 ## Other observations

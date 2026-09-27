@@ -23,7 +23,7 @@ const OPTIONS: Option[] = [
     pros: [
       "Can start this week, with no new systems and no stored passwords",
       "A person looks at every file before it goes in",
-      "Replacing the file by hand, and forgetting to, goes away",
+      "One simple weekly step instead of editing files, and the import checks catch a wrong or outdated file",
     ],
     cons: [
       "The 2-hour export stays manual",
@@ -42,7 +42,7 @@ const OPTIONS: Option[] = [
       "Repository owner: stores that access as a GitHub secret",
     ],
     pros: [
-      "Uses a scheduled export most marketing platforms and CRMs already offer",
+      "Uses the scheduled export that many marketing platforms and CRMs already offer",
       "No code written against the source system",
       "The file format stays the one the analyst exports today",
     ],
@@ -207,8 +207,8 @@ export function AutomationPage() {
         <span className="option-label">Our suggestion</span>
         <h2 id="suggest-h">Start with option 1 now, then move to option 2</h2>
         <p>
-          The guided upload fixes the forgotten-file problem this week with no new systems. Once the source system's
-          scheduled export is set up, option 2 removes the weekly manual work, with far less to build and maintain than a
+          The guided upload can start this week with no new systems, and the import checks catch a wrong or outdated file.
+          Once the source system's scheduled export is set up, option 2 removes the weekly manual work, with far less to build and maintain than a
           direct pull. Option 3 makes sense only if touchpoints already flow into a company warehouse, and option 4 only if
           the export can't be scheduled or the data needs to be fresher than weekly.
         </p>

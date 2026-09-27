@@ -9,6 +9,7 @@ import { EvidencePage } from "./pages/EvidencePage";
 import { AutomationPage } from "./pages/AutomationPage";
 import { LessonsPage } from "./pages/LessonsPage";
 import { DecisionLogPage } from "./pages/DecisionLogPage";
+import { DefinitionsPage } from "./pages/DefinitionsPage";
 
 const PAGES: Record<SectionId, () => React.ReactElement> = {
   problem: ProblemPage,
@@ -17,9 +18,10 @@ const PAGES: Record<SectionId, () => React.ReactElement> = {
   "how-it-works": HowItWorksPage,
   "how-to-use": HowToUsePage,
   evidence: EvidencePage,
-  automation: AutomationPage,
   lessons: LessonsPage,
   decisions: DecisionLogPage,
+  automation: AutomationPage,
+  definitions: DefinitionsPage,
 };
 
 const fromHash = (): SectionId => {
@@ -55,10 +57,10 @@ export function App() {
         <a className="site-name" href="#problem">Channel mapper</a>
         <nav aria-label="Sections">
           <ol>
-            {SECTIONS.map((s, i) => (
-              <li key={s.id}>
+            {SECTIONS.map((s) => (
+              <li key={s.id} className={s.label.startsWith("E") ? "enhancement" : undefined}>
                 <a href={`#${s.id}`} aria-current={s.id === current ? "page" : undefined}>
-                  <span className="n">{i + 1}</span>{s.title}
+                  <span className="n">{s.label}</span>{s.title}
                 </a>
               </li>
             ))}
@@ -66,7 +68,7 @@ export function App() {
         </nav>
       </header>
       <main>
-        <h1 className="page-title"><span className="n">{index + 1}</span>{section.title}</h1>
+        <h1 className="page-title"><span className="n">{section.label}</span>{section.title}</h1>
         <Page />
         <nav className="pager" aria-label="Previous and next section">
           {prev ? <a href={`#${prev.id}`}>← {prev.title}</a> : <span />}

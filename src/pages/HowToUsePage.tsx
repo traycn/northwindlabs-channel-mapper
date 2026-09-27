@@ -21,9 +21,9 @@ export function HowToUsePage() {
   return (
     <>
       <p className="lead">
-        Use the review queue once a week, after the weekly check. Every Monday, a GitHub issue lists any new source values
-        that aren't on the approved list. The marketing analyst works through them in the review queue, usually in a few minutes. This quarter
-        there were four.
+        Use the review queue once a week, after the weekly check. When new source values appear that aren't on the approved
+        list, the Monday check opens a GitHub issue listing them. The marketing analyst then works through them in the review
+        queue. This quarter there were four.
       </p>
 
       <section aria-labelledby="steps-h">
