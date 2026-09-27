@@ -172,12 +172,12 @@ Status as of the 2026-09-27 launch:
 - [x] Every status appears in the results, or there's a note explaining why one doesn't.
 - [x] Blank and broken values never reach the AI. Checked on the live site: of 12 values sent, only the 4 unfamiliar ones reached the AI. The Cloudflare logs haven't been reviewed yet.
 - [x] With the AI connection turned off, the site uses the backup and labels those rows.
-- [ ] Approve, undo and reset all work, and one visitor's changes never affect another's. Approve and undo are checked; reset still needs one click-through by the team.
+- [x] Approve, undo and reset all work, and one visitor's changes never affect another's. Reset confirmed by the team.
 - [ ] Spending limit set, request limit tested, and the second run reuses saved answers. The spending limit is set and reuse is checked live; the request limit is covered by tests only.
 - [x] The weekly check has opened a test issue.
 - [x] "Options we considered" ends with one clear choice.
 - [x] `DECISION_LOG.md` has real entries.
-- [ ] The site looks right on a laptop, during screen sharing, and on a phone. Checked at laptop and phone sizes in a browser; still to check on a real phone.
+- [x] The site looks right on a laptop, during screen sharing, and on a phone. Confirmed on a real phone by the team.
 
 ## Glossary
 
