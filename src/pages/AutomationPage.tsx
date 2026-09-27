@@ -17,7 +17,7 @@ const OPTIONS: Option[] = [
     automated:
       "The analyst still exports the data, but uploads the file straight to the repository through GitHub's website. Everything after that runs by itself: the import checks, the weekly check and the site rebuild.",
     who: [
-      "Marketing analyst: uploads the file each week, a couple of minutes",
+      "Marketing analyst: a short weekly upload of the exported file",
       "Repository owner: gives the analyst access to upload",
     ],
     pros: [

@@ -18,7 +18,7 @@ const DIFFERENCES = [
 export function ProblemPage() {
   return (
     <>
-      <p className="lead">Marketing and sales report on the same touchpoints every week, and they never get the same answer.</p>
+      <p className="lead">Marketing and sales report on the same data every week, and their headline numbers never match.</p>
 
       <ul className="keystats" aria-label="Key numbers">
         {KEY_NUMBERS.map((k) => (
@@ -40,7 +40,7 @@ export function ProblemPage() {
           nobody can look inside.
         </p>
         <p>
-          Definitions also change without anyone saying so. A week 7 scoring update, logged as “routine”, lowered the score
+          Definitions also change without being explained. A week 7 scoring update, logged as “routine”, lowered the score
           needed to become an MQL from 62 to 44. In weeks 7 to 13, 44 of 160 MQLs (27.5%) wouldn't have qualified under the
           old rule, and week 13's 31 MQLs would have been 20. Part of the rise in MQLs in the second half of the quarter comes
           from this change, not from more demand.

@@ -8,6 +8,7 @@ interface Definition {
   question: string;
   data: React.ReactNode[];
   options: string[];
+  headline: string;
   recommendation: React.ReactNode;
   who: string;
   status: "Open" | "Partly decided";
@@ -20,21 +21,22 @@ const DEFINITIONS: Definition[] = [
     question: "Should the shared weekly view lead with qualified leads (MQLs), leads accepted by sales, or both?",
     data: [
       <>Week 10: marketing reported <strong>14</strong> MQLs, sales reported <strong>17</strong> accepted leads, from the same data.</>,
-      <>Weeks 1 to 13: <strong>253</strong> MQLs and <strong>177</strong> acceptances.</>,
-      <>About three in four MQLs are accepted (74% in weeks 1 to 6, 76% in weeks 7 to 13). 63 were never accepted.</>,
+      <>Of the <strong>253</strong> MQLs qualified in weeks 1 to 13, <strong>190 (75%)</strong> were accepted, some after the period ended. 63 were never accepted.</>,
+      <>The acceptance rate was similar before and after the week 7 threshold change: 74% in weeks 1 to 6, 76% in weeks 7 to 13.</>,
     ],
     options: [
       "Qualified only: an early signal, but it includes leads sales won't accept.",
       "Accepted only: closer to pipeline, but it lags and depends on how fast sales works.",
       "Both, side by side, with the acceptance rate between them.",
     ],
+    headline: "Both, side by side, with the acceptance rate.",
     recommendation: (
       <>
         <strong>Both, side by side, with the acceptance rate.</strong> Neither team loses its number, and the gap between
         them becomes a measured conversion rate instead of a disagreement.
       </>
     ),
-    who: "Marketing and sales, with leadership deciding if they don't agree.",
+    who: "Marketing and sales, with leadership as the tie-breaker.",
     status: "Open",
   },
   {
@@ -44,11 +46,13 @@ const DEFINITIONS: Definition[] = [
     data: [
       <>Sales accepts leads <strong>2 to 7 days</strong> after they qualify, <strong>4.4 days</strong> on average. So many of a week's accepted leads qualified the week before.</>,
       <>Of week 13's 31 MQLs, <strong>8</strong> had been accepted by the end of the period on 5 July. <strong>21</strong> were accepted by 14 July.</>,
+      <>Counted by accept date, weeks 1 to 13 had <strong>177</strong> acceptances. Followed from the week they qualified, the same period's MQLs led to <strong>190</strong>. Same leads, different date rule, different number.</>,
     ],
     options: [
       "Keep each count on its own date (as today).",
       "Count by group: for the MQLs qualified in a week, show how many were later accepted.",
     ],
+    headline: "Keep each count on its own date, and add the group view.",
     recommendation: (
       <>
         <strong>Keep each count on its own date, and add the group view.</strong> Show “of the MQLs qualified in week N, X%
@@ -69,12 +73,13 @@ const DEFINITIONS: Definition[] = [
       <>MQLs scoring under 62 were accepted <strong>70%</strong> of the time (31 of 44), compared with <strong>78%</strong> (90 of 116) for those scoring 62 or more. The difference rests on a small group.</>,
     ],
     options: ["Keep 44.", "Go back to 62.", "Set a new value after reviewing more acceptance data."],
+    headline: "Name one owner, and record and flag every change before it takes effect.",
     recommendation: (
       <>
         <strong>The value is the teams' call; how it changes shouldn't be.</strong> Name one owner. Record every change in the
         decision log (date, old value, new value and why) before it takes effect. Mark the change on trend charts, and for a
-        transition period, report MQLs under both the old and new rule. Revisit the value once there's more acceptance data
-        than 44 people.
+        transition period, report MQLs under both the old and new rule. Revisit the value once acceptance data covers more
+        than the 44 lower-score MQLs seen so far.
       </>
     ),
     who: "Marketing and sales. Leadership names the owner.",
@@ -92,6 +97,7 @@ const DEFINITIONS: Definition[] = [
       "Each team keeps its own grouping.",
       "One approved list for both teams: marketing shows channels, sales shows the platform split.",
     ],
+    headline: "One approved list for both teams, each showing the detail it needs.",
     recommendation: (
       <>
         <strong>One approved list for both teams.</strong> Still to decide: whether TikTok and X become Paid Social platforms,
@@ -111,6 +117,7 @@ const DEFINITIONS: Definition[] = [
       <>With the approved list, <strong>171</strong> (8.6%) remain: 68 blank and 103 from four unfamiliar values.</>,
     ],
     options: ["Keep folding them into “Other”.", "Show them as a separate Unresolved / waiting bucket, with its share of all touchpoints."],
+    headline: "A separate Unresolved / waiting bucket in both reports.",
     recommendation: (
       <>
         <strong>A separate Unresolved / waiting bucket in both reports</strong>, never added to the closest-looking channel.
@@ -129,6 +136,7 @@ const DEFINITIONS: Definition[] = [
       <>Both reports and all campaigns say “Q3”, but the dates run from April to early July, which is calendar Q2.</>,
     ],
     options: ["Calendar quarters.", "Fiscal quarters, if the company uses them."],
+    headline: "State the week start and period on every report, and confirm what “Q3” means.",
     recommendation: (
       <>
         <strong>State the week start and the period on every report</strong>, and confirm whether “Q3” is a fiscal quarter.
@@ -166,7 +174,7 @@ export function DefinitionsPage() {
             {DEFINITIONS.map((d) => (
               <tr key={d.id}>
                 <td data-label="Definition"><a href={`#definitions`} onClick={(e) => { e.preventDefault(); document.getElementById(`def-${d.id}`)?.scrollIntoView({ behavior: "smooth" }); }}>{d.title}</a></td>
-                <td data-label="Recommendation">{d.recommendation}</td>
+                <td data-label="Recommendation">{d.headline}</td>
                 <td data-label="Who decides">{d.who}</td>
                 <td data-label="Status"><span className={`def-status ${d.status === "Open" ? "open" : "partly"}`}>{d.status}</span></td>
               </tr>
