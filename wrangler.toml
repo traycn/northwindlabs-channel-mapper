@@ -5,7 +5,7 @@ pages_build_output_dir = "dist"
 compatibility_date = "2026-09-01"
 
 # Stores remembered AI answers (the cache) and the request-limit counters.
-# Replace the id with the one Cloudflare gives when the namespace is created.
+# Namespace "channel-mapper-suggest", created 2026-09-27.
 [[kv_namespaces]]
 binding = "SUGGEST_KV"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "b8fdfedec89142f0b4d5308983ad12e6"
