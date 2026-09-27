@@ -81,6 +81,7 @@ Complete these before sharing the link with anyone:
   /pages           one file per site section
   /components      reusable screen pieces
 /functions/api/suggest.ts   the AI connection
+/scripts                    team commands (counts, AI test, backup, weekly check), no screens
 /data
   touchpoints.csv            the touchpoint data
   weekly-report.html         the weekly marketing report

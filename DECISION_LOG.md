@@ -121,3 +121,13 @@ The harder test cases found two confidently wrong answers (`cpc` and `ppc` → P
   - `podcast_sponsor` may be suggested as Referral with medium confidence.
   - `tiktok/paid`, `twitter_ads` and `bing/organic` get "I don't know".
   - `adwords` gets "I don't know" when it isn't on the approved list, which only happens in the test.
+
+## 2026-09-27: Stage 3 to 5 follow-ups (decided by Tracy N)
+
+### Status name for values marked "Not a channel"
+- **Suggested:** A new status, "Unresolved: not a channel". These values stay in the Unresolved / waiting bucket and are never counted in a channel.
+- **Decided:** Approved as named.
+
+### `scripts/` folder
+- **Suggested:** Keep team commands (counts, AI test, backup, weekly check) in a `scripts/` folder, separate from the mapper, and add it to the folder list in `CLAUDE.md`.
+- **Decided:** Approved. `CLAUDE.md` now lists `/scripts`.
