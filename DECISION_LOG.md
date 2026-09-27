@@ -136,3 +136,12 @@ The harder test cases found two confidently wrong answers (`cpc` and `ppc` → P
 - **Suggested:** Team only, with Cloudflare Access in front of the site, rather than anyone with the link.
 - **Decided:** Team only.
 - **Why:** The site shows the approved list and AI answers, and a public link would let strangers use up the AI request limit.
+
+### Who writes the site's explanations
+- **Rule in `CLAUDE.md`:** the team writes the explanations, reasoning and recommendations shown on the site, and Claude Code never fills them in.
+- **Decided:** Claude Code drafts all of them, as one production-ready presentation, using only facts from the project's own data, checks and this log. `CLAUDE.md` now records this.
+- **Why:** Team request, to have a complete presentation before going live.
+- **Choices in the draft the team should confirm:**
+  - "Our choice" on the Options page is **B. Automate manual steps**, with shared definitions as the next step.
+  - Tracy N is named as the person to ask when unsure, and as the person who adds exported decisions to the approved list each week.
+  - The marketing analyst is named as the person who works through the review queue each week.

@@ -12,6 +12,8 @@ The team includes people who code and people who don't. Claude Code should:
 
 The team writes the explanations, reasoning and recommendations shown in the app. Claude Code builds the pages that hold that content and marks the empty spots with `<!-- TEAM WRITES: ... -->`. It never fills them in itself.
 
+**Update (2026-09-27):** at the team's request, Claude Code drafted this content using only facts from the project's own data, checks and decision log. The team owns it and reviews any changes. New empty spots still use the `TEAM WRITES` marker, and Claude Code only fills them when the team asks.
+
 ## What we're building
 
 A website with two jobs:

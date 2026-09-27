@@ -9,7 +9,6 @@ import { Summary } from "../components/Summary";
 import { GroupingTotals } from "../components/GroupingTotals";
 import { ReviewQueue } from "../components/ReviewQueue";
 import { ResultsTable } from "../components/ResultsTable";
-import { TeamWrites } from "../components/TeamWrites";
 
 function download(filename: string, data: unknown) {
   const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2) + "\n"], { type: "application/json" }));
@@ -46,8 +45,11 @@ export function MapperPage() {
 
   return (
     <>
-      {/* <!-- TEAM WRITES: short intro to the mapper: what it does and what to look at first --> */}
-      <TeamWrites>a short intro to the mapper and what to look at first.</TeamWrites>
+      <p className="lead">
+        This runs the mapper on every touchpoint from 6 April to 5 July 2026. Start with the <strong>Unresolved / waiting</strong> box:
+        it holds everything not yet placed in a channel, shown on its own instead of hidden in “Other”. Then work through the
+        review queue. Each decision updates the totals straight away.
+      </p>
 
       {usingBackup && (
         <p className="notice warn" role="status">

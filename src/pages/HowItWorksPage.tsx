@@ -1,6 +1,5 @@
 // Section 4: which steps follow fixed rules and which use AI. The diagram
 // follows the "Fixed rules vs. AI" table in CLAUDE.md.
-import { TeamWrites } from "../components/TeamWrites";
 
 type Who = "Fixed rules" | "AI" | "A person";
 
@@ -26,8 +25,24 @@ const KIND: Record<Who, string> = { "Fixed rules": "rules", AI: "ai", "A person"
 export function HowItWorksPage() {
   return (
     <>
-      {/* <!-- TEAM WRITES: why some steps use fixed rules and one uses AI, in plain words --> */}
-      <TeamWrites>why some steps follow fixed rules and one uses AI, in plain words.</TeamWrites>
+      <p className="lead">
+        Almost everything follows fixed rules. AI is used for one step only, and a person always has the final say.
+      </p>
+
+      <section className="prose-block" aria-labelledby="why-h">
+        <h2 id="why-h">Why fixed rules, and why AI for one step</h2>
+        <p>
+          A report has to give the same answer every time. Fixed rules do that: the same value always gets the same result,
+          and every result can be traced back to an entry in the approved list. This quarter, cleaning and lookup alone place
+          91.5% of touchpoints.
+        </p>
+        <p>
+          The one step that needs judgment is a value the list has never seen. Reading <code>facebook_ads</code> as Paid Social
+          on Meta is what AI does well. But it can also be confidently wrong, so it works inside fixed rules: it only sees clean,
+          unfamiliar values; it can only pick one of our groupings or say “I don't know”; only high-confidence answers are shown
+          as suggestions; and nothing counts until a person approves it.
+        </p>
+      </section>
 
       <section aria-labelledby="flow-h">
         <h2 id="flow-h">What happens to each source value</h2>
@@ -57,10 +72,17 @@ export function HowItWorksPage() {
         <ul>{NEVER.map((n) => <li key={n}>{n}</li>)}</ul>
       </section>
 
-      <section aria-labelledby="bucket-h">
+      <section className="prose-block" aria-labelledby="bucket-h">
         <h2 id="bucket-h">The Unresolved / waiting bucket</h2>
-        {/* <!-- TEAM WRITES: why the report keeps a separate Unresolved / waiting bucket instead of "Other" --> */}
-        <TeamWrites>why the report keeps a separate Unresolved / waiting bucket instead of “Other”.</TeamWrites>
+        <p>
+          “Other” mixed three different things: empty cells, junk, and real sources nobody had sorted yet. The report now keeps
+          them in a separate <strong>Unresolved / waiting</strong> bucket, shown with its share of all touchpoints, so everyone
+          can see how much of the report is still uncertain.
+        </p>
+        <p>
+          A value is never quietly added to the closest-looking channel. Channel totals only include values someone has
+          approved, and AI suggestions stay in the bucket until a person approves them.
+        </p>
       </section>
     </>
   );

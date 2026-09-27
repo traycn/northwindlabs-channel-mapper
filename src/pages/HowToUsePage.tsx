@@ -1,42 +1,48 @@
 // Section 5: a walkthrough of the review queue, and what happens after a mistake.
-import { TeamWrites } from "../components/TeamWrites";
+
+const STEPS = [
+  <>Open <a href="#mapper">The mapper</a> and look at the <strong>Unresolved / waiting</strong> box, to see how much is still unplaced.</>,
+  <>In the review queue, read each value, how many touchpoints use it, and the AI's answer and reason. Values with the most touchpoints come first.</>,
+  <>If the AI's suggestion is right, click <strong>Approve</strong>. If it's wrong, or the AI said “I don't know”, click <strong>Choose a different grouping</strong>, pick the grouping (and platform), then click <strong>Approve this grouping</strong>.</>,
+  <>If the value isn't a marketing source at all, such as a test value, click <strong>Not a channel</strong>. It stays in the Unresolved / waiting bucket.</>,
+  <>Check the totals: each approval moves its touchpoints out of the bucket and into the chosen channel straight away.</>,
+  <>Click <strong>Export decisions for the team</strong> and send the file to Tracy N.</>,
+];
+
+const MISTAKES = [
+  <><strong>Clicked the wrong button?</strong> Click <strong>Undo</strong> next to that decision, or <strong>Undo last</strong>. <strong>Reset all</strong> clears every decision in your browser.</>,
+  <><strong>Trying things out is safe.</strong> Decisions are saved only in your own browser, so they never change anyone else's view or the report.</>,
+  <><strong>Contradictions are blocked.</strong> A value already on the approved list can't be approved under a different grouping, and a value you've already decided needs undoing before it can be changed.</>,
+  <><strong>A person checks everything before it counts.</strong> Nothing reaches the approved list until Tracy N has checked the exported file.</>,
+  <><strong>Wrong entries can be traced and reversed.</strong> If one gets through, it's corrected in the approved list, and the full history of every change is kept.</>,
+];
 
 export function HowToUsePage() {
   return (
     <>
-      {/* <!-- TEAM WRITES: who uses the review queue, and how often --> */}
-      <TeamWrites>who uses the review queue, and how often.</TeamWrites>
+      <p className="lead">
+        Use the review queue once a week, after the weekly check. Every Monday, a GitHub issue lists any new source values
+        that aren't on the approved list. The marketing analyst works through them in the review queue, usually in a few minutes. This quarter
+        there were four.
+      </p>
 
       <section aria-labelledby="steps-h">
         <h2 id="steps-h">Step by step</h2>
-        {/* <!-- TEAM WRITES: numbered steps through the review queue. Buttons on screen: "Approve",
-             "Choose a different grouping", "Not a channel", "Undo", "Undo last", "Reset all",
-             "Export decisions for the team". --> */}
-        <TeamWrites>
-          numbered steps through the review queue. The buttons on screen are Approve, Choose a different grouping, Not a channel,
-          Undo, Undo last, Reset all and Export decisions for the team.
-        </TeamWrites>
-        <p><a href="#mapper">Open the review queue →</a></p>
+        <ol className="steps">{STEPS.map((s, i) => <li key={i}>{s}</li>)}</ol>
       </section>
 
-      <section aria-labelledby="mistakes-h">
+      <section className="prose-block" aria-labelledby="mistakes-h">
         <h2 id="mistakes-h">When someone makes a mistake</h2>
-        {/* <!-- TEAM WRITES: what happens after a mistake. Facts to draw on: decisions stay in the person's
-             own browser; Undo, Undo last and Reset all; approving a value already approved under a
-             different grouping is blocked; a second decision on the same value is blocked until the
-             first is undone; exported decisions are checked by the team before they're added to the
-             approved list; git keeps the history of every change to the approved list. --> */}
-        <TeamWrites>
-          what happens after a mistake. Facts to draw on: decisions stay in the person's own browser; there's Undo, Undo last and Reset all;
-          conflicting approvals are blocked; exported decisions are checked by the team before they're added; and the approved list keeps its
-          full change history.
-        </TeamWrites>
+        <ul className="people">{MISTAKES.map((m, i) => <li key={i}>{m}</li>)}</ul>
       </section>
 
-      <section aria-labelledby="export-h">
+      <section className="prose-block" aria-labelledby="export-h">
         <h2 id="export-h">Getting decisions into the approved list</h2>
-        {/* <!-- TEAM WRITES: who adds exported decisions to the approved list, and how often --> */}
-        <TeamWrites>who adds exported decisions to the approved list, and how often.</TeamWrites>
+        <p>
+          Tracy N reviews exported decision files each week. For each entry, Tracy records who approved it and when, then adds
+          it to the approved list (<code>data/mapping.json</code>). The site and the next weekly check use the updated list
+          from then on.
+        </p>
       </section>
     </>
   );

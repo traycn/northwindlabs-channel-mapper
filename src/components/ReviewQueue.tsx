@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { I_DONT_KNOW, sourceLabel, type Decision, type Grouping, type QueueItem } from "../mapper";
 import { fmt, grouping } from "./format";
-import { TeamWrites } from "./TeamWrites";
 
 interface Props {
   items: QueueItem[];
@@ -114,8 +113,11 @@ export function ReviewQueue(p: Props) {
   return (
     <section aria-labelledby="queue-h">
       <h2 id="queue-h">Review queue ({p.items.length})</h2>
-      {/* <!-- TEAM WRITES: one or two sentences on how to decide, and who to ask when unsure --> */}
-      <TeamWrites>how to decide, and who to ask when unsure.</TeamWrites>
+      <p className="guidance">
+        Approve a grouping only when the value clearly names the channel, and the platform if it has one. If it could be paid
+        or organic, or you can't tell, leave it and ask Tracy N, who approves changes to the approved list. Use{" "}
+        <strong>Not a channel</strong> for test values and anything that isn't a marketing source.
+      </p>
 
       {p.items.length === 0 ? (
         <p className="muted">Nothing waiting. Every value has a decision.</p>

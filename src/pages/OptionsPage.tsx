@@ -1,21 +1,58 @@
 // Section 2: the two options, compared on the same questions, ending with one choice.
-import { TeamWrites } from "../components/TeamWrites";
 
-const QUESTIONS = [
-  "What it unblocks",
-  "How fast it helps",
-  "Who has to agree",
-  "The risks",
-  "What it depends on",
+const OPTIONS = [
+  {
+    name: "Agree on shared definitions",
+    summary: "Marketing, sales and leadership agree on what the headline counts, which date a lead is counted on, the channel list, and who owns changes such as the MQL threshold.",
+  },
+  {
+    name: "Automate manual steps",
+    summary: "Replace hand-sorting of source values with a mapper: fixed rules and an approved list, AI suggestions for unfamiliar values, and a person approving every new entry.",
+  },
 ];
 
-const OPTIONS = ["Agree on shared definitions", "Automate manual steps"];
+const ANSWERS: [question: string, definitions: string, automate: string][] = [
+  [
+    "What it unblocks",
+    "One headline everyone trusts, and weekly numbers that match across reports.",
+    "Every touchpoint sorted the same way every week, the “Other” bucket opened up, and one approved list that both reports can use.",
+  ],
+  [
+    "How fast it helps",
+    "Only once all three groups agree. We can't commit to a date on our own.",
+    "Now. The mapper runs on this quarter's data, and fixed rules alone place 91.5% of touchpoints.",
+  ],
+  [
+    "Who has to agree",
+    "Marketing, sales and leadership, plus a named owner for future changes.",
+    "Marketing, which owns the approved list. Sales can use the same list without changing how it works.",
+  ],
+  [
+    "The risks",
+    "Talks stall, while the manual work and the hidden “Other” bucket carry on.",
+    "We automate a process that still has two definitions. The AI can suggest a wrong grouping, so nothing counts until a person approves it.",
+  ],
+  [
+    "What it depends on",
+    "Time from all three groups, and someone to decide when they disagree.",
+    "The weekly data export the analyst already does, a low-cost AI connection with a spending limit, and a few minutes of review each week.",
+  ],
+];
 
 export function OptionsPage() {
   return (
     <>
-      {/* <!-- TEAM WRITES: one or two sentences introducing the two options --> */}
-      <TeamWrites>one or two sentences introducing the two options.</TeamWrites>
+      <p className="lead">We compared two ways to fix this. Both are needed eventually. The question was which to do first.</p>
+
+      <div className="option-cards">
+        {OPTIONS.map((o, i) => (
+          <div key={o.name} className="option-card">
+            <span className="option-label">Option {String.fromCharCode(65 + i)}</span>
+            <h2>{o.name}</h2>
+            <p>{o.summary}</p>
+          </div>
+        ))}
+      </div>
 
       <section aria-labelledby="compare-h">
         <h2 id="compare-h">Side by side</h2>
@@ -23,19 +60,15 @@ export function OptionsPage() {
           <thead>
             <tr>
               <th scope="col"><span className="visually-hidden">Question</span></th>
-              {OPTIONS.map((o) => <th scope="col" key={o}>{o}</th>)}
+              {OPTIONS.map((o, i) => <th scope="col" key={o.name}>{String.fromCharCode(65 + i)}. {o.name}</th>)}
             </tr>
           </thead>
           <tbody>
-            {QUESTIONS.map((q) => (
+            {ANSWERS.map(([q, a, b]) => (
               <tr key={q}>
                 <th scope="row">{q}</th>
-                {OPTIONS.map((o) => (
-                  <td key={o} data-label={o}>
-                    {/* <!-- TEAM WRITES: answer for this question and option --> */}
-                    <TeamWrites>{q.toLowerCase()} for “{o.toLowerCase()}”.</TeamWrites>
-                  </td>
-                ))}
+                <td data-label={`A. ${OPTIONS[0].name}`}>{a}</td>
+                <td data-label={`B. ${OPTIONS[1].name}`}>{b}</td>
               </tr>
             ))}
           </tbody>
@@ -43,9 +76,17 @@ export function OptionsPage() {
       </section>
 
       <section className="choice" aria-labelledby="choice-h">
-        <h2 id="choice-h">Our choice</h2>
-        {/* <!-- TEAM WRITES: the one option chosen, and why, in a short paragraph. Must name one option. --> */}
-        <TeamWrites>the one option we chose, and why. This must name a single option.</TeamWrites>
+        <span className="option-label">Our choice</span>
+        <h2 id="choice-h">B. Automate manual steps, starting with channel grouping</h2>
+        <p>
+          It helps this quarter without waiting for anyone. It removes the hand-sorting, and it brings every unplaced
+          touchpoint into view instead of hiding it in “Other”. It also gives the definitions conversation a documented
+          starting point: one approved list that records both the channel marketing reports and the platform sales splits by.
+        </p>
+        <p>
+          Agreeing on shared definitions is the next step, not a rejected one. It starts with which headline the weekly view
+          leads with, and who owns the MQL threshold. See <a href="#evidence">What comes next</a>.
+        </p>
       </section>
     </>
   );

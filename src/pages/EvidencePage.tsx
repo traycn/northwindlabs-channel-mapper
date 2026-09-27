@@ -3,7 +3,6 @@
 // from data/test_results.json, scored against the current data/test_set.json.
 import { I_DONT_KNOW, buildRows, cleanValue, summarizeRows } from "../mapper";
 import { approvedList, sources } from "../data/browserData";
-import { TeamWrites } from "../components/TeamWrites";
 import { fmt, pct } from "../components/format";
 import testSet from "../../data/test_set.json";
 import testResults from "../../data/test_results.json";
@@ -44,8 +43,13 @@ export function EvidencePage() {
     <>
       <section aria-labelledby="measure-h">
         <h2 id="measure-h">What we measure</h2>
-        {/* <!-- TEAM WRITES: what we measure and why those measures matter --> */}
-        <TeamWrites>what we measure, and why those measures matter.</TeamWrites>
+        <ul className="people">
+          <li><strong>Share placed by fixed rules.</strong> How much is settled with no AI and no person. It shows how complete the approved list is.</li>
+          <li><strong>Unresolved / waiting share.</strong> How much of the report is still uncertain. We want it visible, and shrinking week by week.</li>
+          <li><strong>Confidently wrong AI answers.</strong> The risky kind, because they appear as ready-to-approve suggestions. The goal is zero.</li>
+          <li><strong>AI agreement and correct “I don't know” answers.</strong> Whether the AI saves reviewers time without guessing.</li>
+          <li><strong>Manual time each week.</strong> Hand-sorting took about 1.5 hours a week. Now only new values need a person.</li>
+        </ul>
       </section>
 
       <section aria-labelledby="rules-h">
@@ -90,14 +94,29 @@ export function EvidencePage() {
             ))}
           </tbody>
         </table>
-        {/* <!-- TEAM WRITES: what the test results mean, in a sentence or two --> */}
-        <TeamWrites>what these results mean, in a sentence or two.</TeamWrites>
+        <div className="prose-block">
+          <h3>What this means</h3>
+          <p>
+            Fixed rules place 91.5% of touchpoints before the AI is involved, and everything else is visible instead of
+            hidden. In the test, the AI made no confidently wrong suggestions: every disagreement went to a person. It didn't
+            settle any of this quarter's four real unfamiliar values on its own. It was unsure about each one, which is the right
+            answer for values like <code>li</code> and <code>social</code>. It becomes more useful as new spellings of known
+            channels appear.
+          </p>
+        </div>
       </section>
 
       <section aria-labelledby="next-h">
         <h2 id="next-h">What comes next</h2>
-        {/* <!-- TEAM WRITES: what comes next (the "what's next" list) --> */}
-        <TeamWrites>what comes next. Ideas already raised include a script that adds exported review decisions to the approved list.</TeamWrites>
+        <ol className="steps">
+          <li><strong>Agree on shared definitions</strong> with sales and leadership: which headline the weekly view leads with (qualified, accepted, or both), who owns the MQL threshold, and where changes to it are recorded.</li>
+          <li><strong>Find out what <code>promo_x</code> and <code>newchannel_q3</code> are</strong>, and where <code>li</code> and <code>social</code> come from, so they can be approved or fixed at the source.</li>
+          <li><strong>Confirm the AI test set's expected answers</strong>, so it moves from draft to approved.</li>
+          <li><strong>Decide whether TikTok and X become Paid Social platforms.</strong> Until then, their values go to a person.</li>
+          <li><strong>Add exported decisions to the approved list with a small script</strong>, instead of copying them by hand.</li>
+          <li><strong>Refresh the touchpoint data automatically</strong>, so the weekly check always runs on the latest export.</li>
+          <li><strong>Move to a newer AI model when needed.</strong> Claude Haiku 4.5 won't be retired before 15 October 2026, with at least 60 days' notice.</li>
+        </ol>
       </section>
     </>
   );

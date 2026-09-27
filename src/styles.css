@@ -92,15 +92,6 @@ main { max-width: 1200px; margin: 0 auto; padding: 24px; }
 section { margin-bottom: 32px; }
 h2 { font-size: 1.1rem; font-weight: 600; margin: 0 0 12px; }
 
-.team-writes {
-  border: 1px dashed var(--line);
-  border-radius: var(--radius);
-  padding: 10px 14px;
-  color: var(--ink-soft);
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
-
 .notice {
   border-left: 4px solid var(--accent);
   background: var(--accent-tint);
@@ -260,7 +251,6 @@ body.present { --line: color-mix(in srgb, var(--ink) 30%, var(--paper)); }
 .compare th[scope="row"] { font-size: 0.95rem; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--ink); width: 18%; }
 .compare th[scope="col"] { font-size: 1rem; text-transform: none; letter-spacing: 0; color: var(--ink); }
 .compare td { width: 41%; }
-.compare .team-writes { margin: 0; }
 .choice { border: 2px solid var(--accent); border-radius: var(--radius); padding: 16px 20px; margin-top: 24px; }
 
 /* How it works: one row per step, labeled by who handles it (text, not color alone). */
@@ -305,4 +295,49 @@ body.present { --line: color-mix(in srgb, var(--ink) 30%, var(--paper)); }
   .facts td[data-label]::before, .compare td::before { content: attr(data-label); display: block; font: 0.75rem/1.6 var(--sans); color: var(--ink-soft); text-transform: uppercase; }
   .facts.narrow tr { display: flex; justify-content: space-between; }
   .facts.narrow th, .facts.narrow td { display: block; border: none; }
+}
+
+/* ---------- Written content ---------- */
+.lead { font-size: 1.15rem; line-height: 1.55; max-width: 760px; margin: 0 0 24px; }
+.prose-block { max-width: 760px; }
+.prose-block p { margin: 0 0 12px; }
+.prose-block code, .steps code, .lead code, .after-table code, .people code {
+  font-family: var(--mono); font-size: 0.9em; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px;
+}
+.after-table { max-width: 760px; margin-top: 16px; }
+.guidance { font-size: 0.92rem; color: var(--ink-soft); margin: 0 0 14px; }
+
+.keystats {
+  list-style: none; margin: 0 0 32px; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+}
+.keystats li { border: 1px solid var(--line); border-top: 3px solid var(--unresolved); border-radius: var(--radius); padding: 12px 14px; background: var(--panel); }
+.keystats strong { display: block; font-size: 1.6rem; font-weight: 600; line-height: 1.2; margin-bottom: 4px; }
+.keystats span { font-size: 0.88rem; color: var(--ink-soft); }
+
+.people { margin: 0; padding-left: 20px; max-width: 760px; }
+.people li { margin: 0 0 10px; }
+
+.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; max-width: 760px; }
+.steps li { counter-increment: step; position: relative; padding: 0 0 12px 40px; }
+.steps li::before {
+  content: counter(step); position: absolute; left: 0; top: 0;
+  width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 0.85rem; font-weight: 600; background: var(--accent-tint); color: var(--accent); border: 1px solid var(--accent);
+}
+
+.lessons { margin: 0 0 20px; padding-left: 22px; max-width: 760px; }
+.lessons li { margin: 0 0 14px; }
+
+.option-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.option-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; background: var(--panel); }
+.option-card h2 { margin: 2px 0 6px; }
+.option-card p { margin: 0; color: var(--ink-soft); }
+.option-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
+.choice h2 { margin-top: 2px; }
+.choice p { max-width: 760px; margin: 0 0 10px; }
+
+@media (max-width: 760px) {
+  .keystats { grid-template-columns: 1fr 1fr; }
+  .option-cards { grid-template-columns: 1fr; }
 }
