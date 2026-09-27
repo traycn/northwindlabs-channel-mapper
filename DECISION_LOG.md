@@ -131,3 +131,8 @@ The harder test cases found two confidently wrong answers (`cpc` and `ppc` → P
 ### `scripts/` folder
 - **Suggested:** Keep team commands (counts, AI test, backup, weekly check) in a `scripts/` folder, separate from the mapper, and add it to the folder list in `CLAUDE.md`.
 - **Decided:** Approved. `CLAUDE.md` now lists `/scripts`.
+
+### Who can open the site
+- **Suggested:** Team only, with Cloudflare Access in front of the site, rather than anyone with the link.
+- **Decided:** Team only.
+- **Why:** The site shows the approved list and AI answers, and a public link would let strangers use up the AI request limit.
