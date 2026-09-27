@@ -6,6 +6,7 @@ import { MapperPage } from "./pages/MapperPage";
 import { HowItWorksPage } from "./pages/HowItWorksPage";
 import { HowToUsePage } from "./pages/HowToUsePage";
 import { EvidencePage } from "./pages/EvidencePage";
+import { AutomationPage } from "./pages/AutomationPage";
 import { LessonsPage } from "./pages/LessonsPage";
 import { DecisionLogPage } from "./pages/DecisionLogPage";
 
@@ -16,6 +17,7 @@ const PAGES: Record<SectionId, () => React.ReactElement> = {
   "how-it-works": HowItWorksPage,
   "how-to-use": HowToUsePage,
   evidence: EvidencePage,
+  automation: AutomationPage,
   lessons: LessonsPage,
   decisions: DecisionLogPage,
 };

@@ -29,8 +29,9 @@ A website with two jobs:
 4. **How it works.** Which steps follow fixed rules and which use AI, and why.
 5. **How to use it.** A step-by-step walkthrough of the review queue, and what happens when someone makes a mistake.
 6. **How we know it works.** What we measure, the test results, and what comes next.
-7. **Lessons learned.** One short page.
-8. **Decision log.** Every time the team changed or rejected something AI suggested, shown from `DECISION_LOG.md`.
+7. **Automating the import.** Ways to automate the weekly touchpoint import: what each would automate, who would be involved, and the pros and cons. (Added 2026-09-27 at the team's request.)
+8. **Lessons learned.** One short page.
+9. **Decision log.** Every time the team changed or rejected something AI suggested, shown from `DECISION_LOG.md`.
 
 ## Fixed rules vs. AI
 

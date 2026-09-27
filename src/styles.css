@@ -341,3 +341,31 @@ body.present { --line: color-mix(in srgb, var(--ink) 30%, var(--paper)); }
   .keystats { grid-template-columns: 1fr 1fr; }
   .option-cards { grid-template-columns: 1fr; }
 }
+
+/* ---------- Automating the import ---------- */
+.before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; }
+.before-after > div { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 16px; background: var(--panel); }
+.mini-flow { margin: 6px 0 0; padding-left: 20px; }
+.mini-flow li { margin: 4px 0; }
+.mini-flow em { font-style: normal; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-left: 6px; padding: 1px 6px; border-radius: 999px; }
+.mini-flow .manual em { background: var(--unresolved-tint); color: var(--unresolved); }
+.mini-flow .auto em { background: var(--mapped-tint); color: var(--mapped); }
+
+.auto-options { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.auto-option { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; background: var(--panel); }
+.auto-option h3 { margin: 4px 0 8px; font-size: 1.1rem; }
+.auto-option p { margin: 0 0 8px; }
+.auto-head { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; align-items: baseline; }
+.effort { font-size: 0.85rem; color: var(--ink-soft); }
+.sub { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); margin: 10px 0 4px !important; }
+.sub.pro { color: var(--mapped); }
+.sub.con { color: var(--unresolved); }
+.who-list, .proscons ul { margin: 0; padding-left: 18px; font-size: 0.92rem; }
+.who-list li, .proscons li { margin: 3px 0; }
+.proscons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.compare.four td { width: 20.5%; }
+.mini-flow code { font-family: var(--mono); font-size: 0.9em; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+
+@media (max-width: 900px) {
+  .auto-options, .before-after, .proscons { grid-template-columns: 1fr; }
+}

@@ -155,3 +155,14 @@ The harder test cases found two confidently wrong answers (`cpc` and `ppc` → P
 
 - Weekly check: the manual test run opened a test issue listing the 4 unrecognized values.
 - Live AI check: of 12 values sent, only the 4 unfamiliar ones reached the AI. Blanks, junk and approved values were dropped. The same request again was answered entirely from remembered answers.
+
+## 2026-09-27: Content confirmed and a new section (decided by Tracy N)
+
+### The three content choices
+- **Suggested (in the drafted content):** "Our choice" is B, Automate manual steps; Tracy N is the contact when unsure and adds exported decisions to the approved list; the marketing analyst works through the review queue weekly.
+- **Decided:** All three confirmed.
+
+### New section: Automating the import
+- **Suggested:** Not in `CLAUDE.md`'s section list. Requested by the team.
+- **Decided:** Add a section that compares ways to automate the weekly touchpoint import: what each would automate, who would be involved, and the pros and cons. It sits after "How we know it works". `CLAUDE.md` now lists it.
+- **Why:** Someone currently has to export the data and replace `data/touchpoints.csv` by hand each week, or the weekly check keeps seeing old data.

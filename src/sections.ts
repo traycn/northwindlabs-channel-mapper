@@ -7,6 +7,7 @@ export const SECTIONS = [
   { id: "how-it-works", title: "How it works" },
   { id: "how-to-use", title: "How to use it" },
   { id: "evidence", title: "How we know it works" },
+  { id: "automation", title: "Automating the import" },
   { id: "lessons", title: "Lessons learned" },
   { id: "decisions", title: "Decision log" },
 ] as const;
