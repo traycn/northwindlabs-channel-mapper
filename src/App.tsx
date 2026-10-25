@@ -11,6 +11,8 @@ import { LessonsPage } from "./pages/LessonsPage";
 import { DecisionLogPage } from "./pages/DecisionLogPage";
 import { DefinitionsPage } from "./pages/DefinitionsPage";
 
+// App.tsx state file
+
 const PAGES: Record<SectionId, () => React.ReactElement> = {
   problem: ProblemPage,
   options: OptionsPage,
